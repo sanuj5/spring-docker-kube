@@ -4,7 +4,9 @@ podTemplate(containers: [
 //    agent any
     node(POD_LABEL) {
         container('maven') {
-            git 'https://github.com/sanuj5/spring-docker-kube.git'
+            stage('Checkout'){
+                checkout scm
+            }
             stage('Build') {
                 sh 'mvn clean package jib:build'
             }
