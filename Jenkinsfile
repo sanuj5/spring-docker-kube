@@ -1,6 +1,6 @@
 podTemplate(
         containers: [
-                containerTemplate(name: 'maven', image: 'maven:3.3.9-jdk-8-alpine', ttyEnabled: true, command: 'cat',args: '--dns=8.8.8.8')
+                containerTemplate(name: 'maven', image: 'maven:3.3.9-jdk-8-alpine', ttyEnabled: true, command: 'cat',args: '--net=local')
         ],
         volumes:[
                 hostPathVolume(hostPath: '/c/Users/sanuj/.m2/', mountPath: '/root/.m2')
