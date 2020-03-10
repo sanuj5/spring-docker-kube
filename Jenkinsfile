@@ -3,8 +3,8 @@ podTemplate(containers: [
 ]) {
 //    agent any
     node(POD_LABEL) {
-        stage('Build') {
-            steps {
+        container('maven') {
+            stage('Build') {
                 sh 'mvn clean package jib:build'
             }
         }
