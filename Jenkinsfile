@@ -13,6 +13,7 @@ podTemplate(
                 checkout scm
             }
             stage('Build') {
+                sh 'eval $(minikube docker-env)'
                 sh 'mvn clean package jib:dockerBuild'
             }
         }
