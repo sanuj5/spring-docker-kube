@@ -52,7 +52,8 @@
 						<image>openjdk:8-alpine</image>
 					</from>
 					<to>
-						<image>spring-docker-kube:latest</image>
+						<image>sanuj5/heisenberg:latest</image>
+						<credHelper>docker-registry</credHelper>
 					</to>
 					<container>
 						<ports>
