@@ -13,7 +13,7 @@ podTemplate(
                 checkout scm
             }
             stage('Build') {
-                sh 'mvn clean package jib:build'
+                sh 'mvn clean package jib:dockerBuild'
             }
         }
     }
