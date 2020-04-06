@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: spring-docker
-          image: spring-docker-kube:latest
-          imagePullPolicy: Never
+          image: sanuj5/heisenberg:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
